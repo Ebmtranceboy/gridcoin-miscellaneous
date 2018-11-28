@@ -1,0 +1,30 @@
+{
+  "author": "Ebmtranceboy",
+  "description": "Gridcoin Telegram Bot",
+  "keywords": [
+    "telegram",
+    "Gridcoin"
+  ],
+  "license": "MIT",
+  "version": "0.0.1",
+  "name": "gridcoin-miscellaneous",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-telegram-bot-api": "^0.30.0"
+  },
+  "engines": {
+    "node": ">=5.6.0"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ebmtranceboy/gridcoin-miscellaneous.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ebmtranceboy/gridcoin-miscellaneous/issues"
+  },
+  "homepage": "https://github.com/Ebmtranceboy/gridcoin-miscellaneous#readme"
+}
