@@ -104,9 +104,9 @@ api.onText(/\/supply/, function(msg, match) {
 api.onText(/\/price( +([a-z]+))?( +(\d+) +(\d+) +(\d+))?/, function(msg, match) {
 	const from = msg.from;
 	
-	const ref = match[2]!=""?match[2]:'usd';
+	const ref = match[2]&&match[2]!=""?match[2]:'usd';
 	const today = new Date(msg.date*1000);
-	const date = match[3]!=""?`${match[4]}-${match[5]}-${match[6]}`:`${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`;
+	const date = match[3]&&match[3]!=""?`${match[4]}-${match[5]}-${match[6]}`:`${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`;
 	
 	async function curl () {
 		const child = await exec('curl https://api.coingecko.com/api/v3/coins/gridcoin-research/history?date='+date, {});
@@ -119,9 +119,9 @@ api.onText(/\/price( +([a-z]+))?( +(\d+) +(\d+) +(\d+))?/, function(msg, match) 
 api.onText(/\/capitalization( +([a-z]+))?( +(\d+) +(\d+) +(\d+))?/, function(msg, match) {
 	const from = msg.from;
 	
-	const ref = match[2]!=""?match[2]:'usd';
+	const ref = match[2]&&match[2]!=""?match[2]:'usd';
 	const today = new Date(msg.date*1000);
-	const date = match[3]!=""?`${match[4]}-${match[5]}-${match[6]}`:`${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`;
+	const date = match[3]&&match[3]!=""?`${match[4]}-${match[5]}-${match[6]}`:`${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`;
 	
 	async function curl () {
 		const child = await exec('curl https://api.coingecko.com/api/v3/coins/gridcoin-research/history?date='+date, {});
@@ -134,9 +134,9 @@ api.onText(/\/capitalization( +([a-z]+))?( +(\d+) +(\d+) +(\d+))?/, function(msg
 api.onText(/\/volume( +([a-z]+))?( +(\d+) +(\d+) +(\d+))?/, function(msg, match) {
 	const from = msg.from;
 	
-	const ref = match[2]!=""?match[2]:'usd';
+	const ref = match[2]&&match[2]!=""?match[2]:'usd';
 	const today = new Date(msg.date*1000);
-	const date = match[3]!=""?`${match[4]}-${match[5]}-${match[6]}`:`${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`;
+	const date = match[3]&&match[3]!=""?`${match[4]}-${match[5]}-${match[6]}`:`${today.getDate()}-${today.getMonth()+1}-${today.getFullYear()}`;
 	
 	async function curl () {
 		const child = await exec('curl https://api.coingecko.com/api/v3/coins/gridcoin-research/history?date='+date, {});
@@ -149,7 +149,7 @@ api.onText(/\/volume( +([a-z]+))?( +(\d+) +(\d+) +(\d+))?/, function(msg, match)
 api.onText(/\/ath( +([a-z]+))?/, function(msg, match) {
 	const from = msg.from;
 	
-	const ref = match[2]!=""?match[2]:'usd';
+	const ref = match[2]&&match[2]!=""?match[2]:'usd';
 	
 	async function curl () {
 		const child = await exec('curl https://api.coingecko.com/api/v3/coins/gridcoin-research', {});
