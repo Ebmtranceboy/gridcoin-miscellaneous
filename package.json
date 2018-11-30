@@ -9,15 +9,20 @@
   "version": "0.0.1",
   "name": "gridcoin-miscellaneous",
   "dependencies": {
+    "child-process-async": "^1.0.1",
+    "d3": "^5.7.0",
+    "d3-node": "^2.1.0",
     "express": "^4.16.4",
-    "node-telegram-bot-api": "^0.30.0"
+    "ngrok": "^2.2.8",
+    "node-telegram-bot-api": "^0.30.0",
+    "request": "^2.88.0"
   },
   "engines": {
     "node": ">=5.6.0"
   },
-  "main": "app.js",
+  "main": "game.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node game.js"
   },
   "repository": {
     "type": "git",
