@@ -10,6 +10,7 @@
   "name": "gridcoin-miscellaneous",
   "dependencies": {
     "child-process-async": "^1.0.1",
+    "lodash": "^4.17.14",
     "node-telegram-bot-api": "^0.30.0"
   },
   "engines": {
